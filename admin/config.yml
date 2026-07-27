@@ -1,0 +1,294 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Uncomment the line below only while testing locally with `npx decap-server`
+# running alongside `npx serve` — remove/comment it out again before deploying.
+# local_backend: true
+
+publish_mode: simple
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+site_url: https://your-site-name.netlify.app
+display_url: https://your-site-name.netlify.app
+logo_url: /images/uploads/logo.png
+
+collections:
+  # ---------------------------------------------------------------------
+  # SITE SETTINGS — hero, about, contact, socials, footer (single record)
+  # ---------------------------------------------------------------------
+  - name: "site_settings"
+    label: "Site Settings"
+    editor: { preview: false }
+    files:
+      - name: "general"
+        label: "Hero, About, Contact & Footer"
+        file: "content/site.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Badge Text", name: "badge", widget: "string" }
+              - { label: "Headline (plain part)", name: "headlinePrefix", widget: "string", hint: "e.g. \"Your Smile Deserves\"" }
+              - { label: "Headline (highlighted part)", name: "headlineHighlight", widget: "string", hint: "e.g. \"Exceptional Care\" — rendered in the gradient accent color" }
+              - { label: "Subheadline", name: "subheadline", widget: "text" }
+              - { label: "Hero Photo", name: "heroImage", widget: "image", required: false }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Intro Paragraph", name: "introText", widget: "text" }
+              - label: "Mission"
+                name: "mission"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+              - label: "Vision"
+                name: "vision"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+              - label: "Values"
+                name: "values"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+              - label: "Facilities Blurb"
+                name: "facilities"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+              - label: "Stats / Counters"
+                name: "stats"
+                widget: "object"
+                fields:
+                  - { label: "Patients Served", name: "patientsServed", widget: "number", value_type: "int" }
+                  - { label: "Years of Experience", name: "yearsExperience", widget: "number", value_type: "int" }
+                  - { label: "Treatments Completed", name: "treatmentsCompleted", widget: "number", value_type: "int" }
+                  - { label: "Satisfaction Rate (%)", name: "satisfactionRate", widget: "number", value_type: "int" }
+          - label: "Contact Info"
+            name: "contact"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Clinic Address", name: "address", widget: "string" }
+              - { label: "Phone Number", name: "phone", widget: "string" }
+              - { label: "Mobile Number", name: "mobile", widget: "string" }
+              - { label: "Email Address", name: "email", widget: "string" }
+              - { label: "Clinic Hours", name: "hours", widget: "string" }
+              - { label: "Emergency Phone", name: "emergencyPhone", widget: "string" }
+              - { label: "Parking Note", name: "parkingNote", widget: "string" }
+              - { label: "Google Maps Embed URL", name: "mapEmbedUrl", widget: "string", hint: "Google Maps 'Embed a map' src URL" }
+          - label: "Social & Chat Links"
+            name: "social"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+              - { label: "TikTok URL", name: "tiktok", widget: "string", required: false }
+              - { label: "YouTube URL", name: "youtube", widget: "string", required: false }
+              - { label: "Messenger Link", name: "messenger", widget: "string", required: false }
+              - { label: "WhatsApp Link", name: "whatsapp", widget: "string", required: false }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Footer Tagline", name: "tagline", widget: "text" }
+
+  # ---------------------------------------------------------------------
+  # REPEATING CONTENT — each stored as { items: [...] } in one JSON file
+  # ---------------------------------------------------------------------
+  - name: "services"
+    label: "Services"
+    files:
+      - name: "list"
+        label: "Services List"
+        file: "content/services.json"
+        fields:
+          - label: "Services"
+            name: "items"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Icon (Font Awesome class, e.g. fa-tooth)", name: "icon", widget: "string" }
+              - { label: "Service Name", name: "name", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+
+  - name: "dentists"
+    label: "Dentists"
+    files:
+      - name: "list"
+        label: "Dentists List"
+        file: "content/dentists.json"
+        fields:
+          - label: "Dentists"
+            name: "items"
+            widget: "list"
+            summary: "{{name}} — {{position}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Position / Title", name: "position", widget: "string" }
+              - { label: "Qualifications", name: "qualifications", widget: "string" }
+              - { label: "Years of Experience", name: "experienceYears", widget: "number", value_type: "int" }
+              - { label: "Specializations", name: "specializations", widget: "string" }
+              - { label: "Photo", name: "photo", widget: "image" }
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+              - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+
+  - name: "why_us"
+    label: "Why Choose Us"
+    files:
+      - name: "list"
+        label: "Why Choose Us List"
+        file: "content/why-us.json"
+        fields:
+          - label: "Features"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Icon (Font Awesome class)", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+
+  - name: "before_after"
+    label: "Before & After"
+    files:
+      - name: "list"
+        label: "Before & After List"
+        file: "content/before-after.json"
+        fields:
+          - label: "Cases"
+            name: "items"
+            widget: "list"
+            summary: "{{label}}"
+            fields:
+              - { label: "Category", name: "category", widget: "select", options: ["veneers", "whitening", "braces", "makeover"] }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Before Photo", name: "beforeImage", widget: "image" }
+              - { label: "After Photo", name: "afterImage", widget: "image" }
+
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - name: "list"
+        label: "Gallery List"
+        file: "content/gallery.json"
+        fields:
+          - label: "Photos"
+            name: "items"
+            widget: "list"
+            summary: "{{label}}"
+            fields:
+              - { label: "Category", name: "category", widget: "select", options: ["interior", "procedures", "team", "patients"] }
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Caption / Label", name: "label", widget: "string" }
+              - { label: "Card Height (px)", name: "height", widget: "number", value_type: "int", default: 340, hint: "Controls the masonry tile height, e.g. 300–440" }
+
+  - name: "testimonials"
+    label: "Testimonials"
+    files:
+      - name: "list"
+        label: "Testimonials List"
+        file: "content/testimonials.json"
+        fields:
+          - label: "Reviews"
+            name: "items"
+            widget: "list"
+            summary: "{{name}} — {{treatment}}"
+            fields:
+              - { label: "Patient Name", name: "name", widget: "string" }
+              - { label: "Patient Photo", name: "photo", widget: "image" }
+              - { label: "Rating (1–5)", name: "rating", widget: "number", value_type: "int", min: 1, max: 5, default: 5 }
+              - { label: "Treatment Received", name: "treatment", widget: "string" }
+              - { label: "Review Text", name: "review", widget: "text" }
+
+  - name: "promotions"
+    label: "Promotions"
+    files:
+      - name: "list"
+        label: "Promotions List"
+        file: "content/promotions.json"
+        fields:
+          - label: "Promotions"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+              - { label: "Card Color", name: "color", widget: "select", options: ["sky", "mint", "amber", "violet", "rose", "emerald"] }
+
+  - name: "insurance"
+    label: "Insurance Partners"
+    files:
+      - name: "list"
+        label: "Insurance Partners List"
+        file: "content/insurance.json"
+        fields:
+          - label: "Partners"
+            name: "items"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Insurance Provider Name", name: "name", widget: "string" }
+
+  - name: "facilities"
+    label: "Clinic Facilities"
+    files:
+      - name: "list"
+        label: "Facilities List"
+        file: "content/facilities.json"
+        fields:
+          - label: "Facilities"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Icon (Font Awesome class)", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+
+  - name: "faqs"
+    label: "FAQs"
+    files:
+      - name: "list"
+        label: "FAQ List"
+        file: "content/faqs.json"
+        fields:
+          - label: "Questions"
+            name: "items"
+            widget: "list"
+            summary: "{{question}}"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+
+  - name: "blog"
+    label: "Blog Posts"
+    files:
+      - name: "list"
+        label: "Blog Posts List"
+        file: "content/blog.json"
+        fields:
+          - label: "Posts"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Category Tag", name: "tag", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Excerpt", name: "excerpt", widget: "text" }
+              - { label: "Cover Image", name: "image", widget: "image" }
+              - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
+              - { label: "Read Time", name: "readTime", widget: "string", default: "4 min read" }

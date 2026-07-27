@@ -1,0 +1,14 @@
+{
+  "items": [
+    { "icon": "fa-x-ray", "title": "Digital X-Ray" },
+    { "icon": "fa-cube", "title": "3D Scanner" },
+    { "icon": "fa-couch", "title": "Comfortable Waiting Area" },
+    { "icon": "fa-wifi", "title": "Free WiFi" },
+    { "icon": "fa-square-parking", "title": "Parking" },
+    { "icon": "fa-wheelchair", "title": "Wheelchair Accessible" },
+    { "icon": "fa-door-closed", "title": "Private Consultation Rooms" },
+    { "icon": "fa-child-reaching", "title": "Kids' Play Area" },
+    { "icon": "fa-mug-hot", "title": "Coffee Corner" },
+    { "icon": "fa-snowflake", "title": "Air-Conditioned Clinic" }
+  ]
+}

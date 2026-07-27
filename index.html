@@ -117,7 +117,7 @@
 </div>
 
 <!-- Cookie Consent -->
-<div id="cookie-banner" class="fixed bottom-0 inset-x-0 z-50 translate-y-full transition-transform duration-500 ease-out">
+<div id="cookie-banner" class="fixed bottom-20 sm:bottom-0 inset-x-0 z-50 translate-y-full transition-transform duration-500 ease-out">
   <div class="mx-4 mb-4 md:mx-auto md:max-w-3xl glass-panel rounded-3xl shadow-soft p-5 flex flex-col sm:flex-row items-center gap-4">
     <p class="text-sm text-slateink/80 flex-1">We use cookies to enhance your browsing experience and provide personalized care recommendations. Read our <a href="#" class="underline decoration-sky-300 hover:text-sky-500">Privacy Policy</a>.</p>
     <div class="flex gap-2 shrink-0">
@@ -167,7 +167,7 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="lg:hidden fixed inset-0 z-50 hidden">
+  <div id="mobile-menu" class="lg:hidden fixed inset-0 z-[55] hidden">
     <div class="absolute inset-0 bg-slateink/40 backdrop-blur-sm" id="mobile-menu-overlay"></div>
     <div class="absolute right-0 top-0 h-full w-[82%] max-w-sm bg-white shadow-2xl p-6 flex flex-col gap-1 overflow-y-auto translate-x-full transition-transform duration-400" id="mobile-menu-panel">
       <div class="flex items-center justify-between mb-6">
@@ -191,56 +191,56 @@
 </header>
 
 <!-- ================= HERO ================= -->
-<section id="home" class="relative overflow-hidden pt-40 pb-28 lg:pt-48 lg:pb-36 hero-gradient">
+<section id="home" class="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-48 lg:pb-36 hero-gradient">
   <div class="floating-shape shape-1"></div>
   <div class="floating-shape shape-2"></div>
   <div class="floating-shape shape-3"></div>
   <div class="absolute inset-0 hero-dots"></div>
 
-  <div class="relative mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
-    <div data-aos="fade-up">
+  <div class="relative mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+    <div data-aos="fade-up" class="text-center lg:text-left">
       <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/70 backdrop-blur border border-white/60 shadow-softer text-xs font-accent font-semibold tracking-wide text-slateink/70 mb-6">
-        <i class="fa-solid fa-sparkles text-sky-400"></i> Premium Dental Care Since 2008
+        <i class="fa-solid fa-sparkles text-sky-400"></i> <span data-cms="hero.badge">Premium Dental Care Since 2008</span>
       </span>
-      <h1 class="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] text-charcoal">
-        Your Smile Deserves <span class="text-gradient">Exceptional Care</span>
+      <h1 class="font-heading font-bold text-3xl sm:text-5xl lg:text-6xl leading-[1.15] sm:leading-[1.1] text-charcoal">
+        <span data-cms="hero.headlinePrefix">Your Smile Deserves</span> <span class="text-gradient" data-cms="hero.headlineHighlight">Exceptional Care</span>
       </h1>
-      <p class="mt-6 text-lg text-slateink/70 max-w-xl leading-relaxed">
+      <p class="mt-5 sm:mt-6 text-base sm:text-lg text-slateink/70 max-w-xl mx-auto lg:mx-0 leading-relaxed" data-cms="hero.subheadline">
         Providing world-class dental treatments with compassion, precision, and modern technology — in a space designed for your comfort.
       </p>
-      <div class="mt-9 flex flex-wrap gap-4">
+      <div class="mt-8 sm:mt-9 flex flex-wrap justify-center lg:justify-start gap-4">
         <a href="#booking" class="btn-primary"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
         <a href="#contact" class="btn-secondary"><i class="fa-regular fa-comment-dots"></i> Contact Us</a>
       </div>
-      <div class="mt-12 grid grid-cols-3 gap-6 max-w-md">
+      <div class="mt-10 sm:mt-12 grid grid-cols-3 gap-3 sm:gap-6 max-w-md mx-auto lg:mx-0">
         <div>
-          <p class="font-heading font-bold text-3xl text-charcoal counter" data-target="18000">0</p>
-          <p class="text-xs text-slateink/60 mt-1">Patients Served</p>
+          <p class="font-heading font-bold text-2xl sm:text-3xl text-charcoal counter" data-target="18000">0</p>
+          <p class="text-[11px] sm:text-xs text-slateink/60 mt-1">Patients Served</p>
         </div>
         <div>
-          <p class="font-heading font-bold text-3xl text-charcoal"><span class="counter" data-target="16">0</span>+</p>
-          <p class="text-xs text-slateink/60 mt-1">Years Experience</p>
+          <p class="font-heading font-bold text-2xl sm:text-3xl text-charcoal"><span class="counter" data-target="16">0</span>+</p>
+          <p class="text-[11px] sm:text-xs text-slateink/60 mt-1">Years Experience</p>
         </div>
         <div>
-          <p class="font-heading font-bold text-3xl text-charcoal"><span class="counter" data-target="99">0</span>%</p>
-          <p class="text-xs text-slateink/60 mt-1">Satisfaction Rate</p>
+          <p class="font-heading font-bold text-2xl sm:text-3xl text-charcoal"><span class="counter" data-target="99">0</span>%</p>
+          <p class="text-[11px] sm:text-xs text-slateink/60 mt-1">Satisfaction Rate</p>
         </div>
       </div>
     </div>
 
-    <div class="relative" data-aos="fade-left" data-aos-delay="150">
-      <div class="relative rounded-5xl overflow-hidden shadow-soft aspect-[4/5] max-w-md mx-auto img-hover">
-        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=80" alt="Smiling dentist with patient in modern dental clinic" loading="eager" class="w-full h-full object-cover" />
+    <div class="relative mt-4 lg:mt-0" data-aos="fade-left" data-aos-delay="150">
+      <div class="relative rounded-5xl overflow-hidden shadow-soft aspect-[4/5] max-w-xs sm:max-w-md mx-auto img-hover">
+        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=80" alt="Smiling dentist with patient in modern dental clinic" loading="eager" class="w-full h-full object-cover" data-cms-img="hero.heroImage" />
       </div>
-      <div class="glass-panel absolute -left-6 bottom-10 hidden sm:flex items-center gap-3 rounded-3xl p-4 shadow-soft w-56 float-anim">
-        <div class="w-11 h-11 rounded-full bg-mint-100 flex items-center justify-center text-mint-500"><i class="fa-solid fa-shield-heart"></i></div>
+      <div class="glass-panel absolute left-2 lg:-left-6 bottom-6 lg:bottom-10 hidden lg:flex items-center gap-3 rounded-3xl p-4 shadow-soft w-56 float-anim">
+        <div class="w-11 h-11 rounded-full bg-mint-100 flex items-center justify-center text-mint-500 shrink-0"><i class="fa-solid fa-shield-heart"></i></div>
         <div>
           <p class="text-sm font-semibold text-charcoal">Sterilized & Safe</p>
           <p class="text-xs text-slateink/60">Hospital-grade hygiene</p>
         </div>
       </div>
-      <div class="glass-panel absolute -right-4 top-8 hidden sm:flex items-center gap-3 rounded-3xl p-4 shadow-soft w-52 float-anim" style="animation-delay:1s">
-        <div class="flex -space-x-2">
+      <div class="glass-panel absolute right-2 lg:-right-4 top-6 lg:top-8 hidden lg:flex items-center gap-3 rounded-3xl p-4 shadow-soft w-52 float-anim" style="animation-delay:1s">
+        <div class="flex -space-x-2 shrink-0">
           <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="patient"/>
           <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=100&q=80" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="patient"/>
         </div>
@@ -258,128 +258,67 @@
   </div>
 </section>
 <!-- ================= ABOUT ================= -->
-<section id="about" class="py-24 lg:py-32 bg-white relative overflow-hidden">
+<section id="about" class="py-16 sm:py-20 lg:py-32 bg-white relative overflow-hidden">
   <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
       <span class="eyebrow">About The Clinic</span>
       <h2 class="section-title mt-3">Where Comfort Meets Clinical Excellence</h2>
-      <p class="mt-4 text-slateink/65 leading-relaxed">For over 16 years, Radiance Dental Studio has combined advanced technology with genuine, personal care — creating a space where every patient feels seen, safe, and confident in their smile.</p>
+      <p class="mt-4 text-slateink/65 leading-relaxed" data-cms="about.introText">For over 16 years, Radiance Dental Studio has combined advanced technology with genuine, personal care — creating a space where every patient feels seen, safe, and confident in their smile.</p>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-14 items-center mb-24">
-      <div class="grid grid-cols-2 gap-4" data-aos="fade-right">
-        <div class="space-y-4">
-          <div class="rounded-4xl overflow-hidden shadow-soft img-hover"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover" alt="Bright modern clinic reception"/></div>
-          <div class="rounded-4xl overflow-hidden shadow-soft img-hover"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover" alt="Dental treatment room"/></div>
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-16 lg:mb-24">
+      <div class="grid grid-cols-2 gap-3 sm:gap-4" data-aos="fade-right">
+        <div class="space-y-3 sm:space-y-4">
+          <div class="rounded-4xl overflow-hidden shadow-soft img-hover"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" class="w-full h-36 sm:h-48 object-cover" alt="Bright modern clinic reception"/></div>
+          <div class="rounded-4xl overflow-hidden shadow-soft img-hover"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" class="w-full h-48 sm:h-64 object-cover" alt="Dental treatment room"/></div>
         </div>
-        <div class="space-y-4 pt-10">
-          <div class="rounded-4xl overflow-hidden shadow-soft img-hover"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dcf?auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover" alt="Modern dental equipment"/></div>
-          <div class="rounded-4xl overflow-hidden shadow-soft img-hover"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover" alt="Friendly dental staff"/></div>
+        <div class="space-y-3 sm:space-y-4 pt-6 sm:pt-10">
+          <div class="rounded-4xl overflow-hidden shadow-soft img-hover"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dcf?auto=format&fit=crop&w=600&q=80" class="w-full h-48 sm:h-64 object-cover" alt="Modern dental equipment"/></div>
+          <div class="rounded-4xl overflow-hidden shadow-soft img-hover"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" class="w-full h-36 sm:h-48 object-cover" alt="Friendly dental staff"/></div>
         </div>
       </div>
 
       <div data-aos="fade-left">
-        <div class="grid sm:grid-cols-2 gap-5 mb-8">
-          <div class="value-card"><i class="fa-solid fa-bullseye text-sky-400"></i><h3>Our Mission</h3><p>Deliver exceptional, personalized dental care that improves confidence and long-term oral health.</p></div>
-          <div class="value-card"><i class="fa-solid fa-eye text-mint-500"></i><h3>Our Vision</h3><p>To be the region's most trusted name in modern, comfortable, and compassionate dentistry.</p></div>
-          <div class="value-card"><i class="fa-solid fa-heart text-sky-400"></i><h3>Our Values</h3><p>Integrity, empathy, precision, and continuous innovation guide everything we do.</p></div>
-          <div class="value-card"><i class="fa-solid fa-building-shield text-mint-500"></i><h3>Modern Facilities</h3><p>State-of-the-art equipment in a calming, spa-inspired environment.</p></div>
+        <div class="grid sm:grid-cols-2 gap-4 sm:gap-5 mb-8">
+          <div class="value-card"><i class="fa-solid fa-bullseye text-sky-400"></i><h3 data-cms="about.mission.title">Our Mission</h3><p data-cms="about.mission.text">Deliver exceptional, personalized dental care that improves confidence and long-term oral health.</p></div>
+          <div class="value-card"><i class="fa-solid fa-eye text-mint-500"></i><h3 data-cms="about.vision.title">Our Vision</h3><p data-cms="about.vision.text">To be the region's most trusted name in modern, comfortable, and compassionate dentistry.</p></div>
+          <div class="value-card"><i class="fa-solid fa-heart text-sky-400"></i><h3 data-cms="about.values.title">Our Values</h3><p data-cms="about.values.text">Integrity, empathy, precision, and continuous innovation guide everything we do.</p></div>
+          <div class="value-card"><i class="fa-solid fa-building-shield text-mint-500"></i><h3 data-cms="about.facilities.title">Modern Facilities</h3><p data-cms="about.facilities.text">State-of-the-art equipment in a calming, spa-inspired environment.</p></div>
         </div>
         <ul class="space-y-3 font-accent text-sm text-slateink/75">
-          <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-mint-500"></i> Certified & continuously trained professionals</li>
-          <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-mint-500"></i> Friendly, patient-first staff culture</li>
-          <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-mint-500"></i> Hospital-grade sterilization on every visit</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-mint-500 shrink-0"></i> Certified & continuously trained professionals</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-mint-500 shrink-0"></i> Friendly, patient-first staff culture</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-mint-500 shrink-0"></i> Hospital-grade sterilization on every visit</li>
         </ul>
       </div>
     </div>
 
     <!-- Counters -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up">
-      <div class="stat-card"><p class="counter font-heading font-bold text-4xl text-gradient" data-target="18000">0</p><span>Patients Served</span></div>
-      <div class="stat-card"><p class="font-heading font-bold text-4xl text-gradient"><span class="counter" data-target="16">0</span>+</p><span>Years of Experience</span></div>
-      <div class="stat-card"><p class="font-heading font-bold text-4xl text-gradient"><span class="counter" data-target="42000">0</span></p><span>Treatments Completed</span></div>
-      <div class="stat-card"><p class="font-heading font-bold text-4xl text-gradient"><span class="counter" data-target="99">0</span>%</p><span>Satisfaction Rate</span></div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6" data-aos="fade-up">
+      <div class="stat-card"><p class="counter font-heading font-bold text-3xl sm:text-4xl text-gradient" data-target="18000">0</p><span>Patients Served</span></div>
+      <div class="stat-card"><p class="font-heading font-bold text-3xl sm:text-4xl text-gradient"><span class="counter" data-target="16">0</span>+</p><span>Years of Experience</span></div>
+      <div class="stat-card"><p class="font-heading font-bold text-3xl sm:text-4xl text-gradient"><span class="counter" data-target="42000">0</span></p><span>Treatments Completed</span></div>
+      <div class="stat-card"><p class="font-heading font-bold text-3xl sm:text-4xl text-gradient"><span class="counter" data-target="99">0</span>%</p><span>Satisfaction Rate</span></div>
     </div>
   </div>
 </section>
 
 <!-- ================= MEET OUR DENTISTS ================= -->
-<section id="dentists" class="py-24 lg:py-32 section-alt relative">
+<section id="dentists" class="py-16 sm:py-20 lg:py-32 section-alt relative">
   <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
       <span class="eyebrow">Our Team</span>
       <h2 class="section-title mt-3">Meet Our Dentists</h2>
       <p class="mt-4 text-slateink/65 leading-relaxed">Board-certified specialists dedicated to precision, comfort, and beautiful, lasting results.</p>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
-      <!-- Dentist Card 1 -->
-      <div class="dentist-card" data-aos="fade-up">
-        <div class="dentist-photo"><img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=500&q=80" alt="Dr. Amara Reyes" loading="lazy"/></div>
-        <div class="p-5 text-center">
-          <h3 class="font-heading font-semibold text-lg text-charcoal">Dr. Amara Reyes</h3>
-          <p class="text-sky-500 text-sm font-accent font-medium">Lead Cosmetic Dentist</p>
-          <p class="text-xs text-slateink/55 mt-2">DDS, Cosmetic & Restorative Dentistry · 14 yrs experience</p>
-          <p class="text-xs text-slateink/55 mt-1">Veneers · Smile Makeovers</p>
-          <div class="flex justify-center gap-3 mt-4 text-slateink/40">
-            <a href="#" class="social-ic"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-ic"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#" class="social-ic"><i class="fa-brands fa-facebook"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- Dentist Card 2 -->
-      <div class="dentist-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="dentist-photo"><img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=500&q=80" alt="Dr. Daniel Cruz" loading="lazy"/></div>
-        <div class="p-5 text-center">
-          <h3 class="font-heading font-semibold text-lg text-charcoal">Dr. Daniel Cruz</h3>
-          <p class="text-sky-500 text-sm font-accent font-medium">Orthodontic Specialist</p>
-          <p class="text-xs text-slateink/55 mt-2">DMD, Orthodontics · 11 yrs experience</p>
-          <p class="text-xs text-slateink/55 mt-1">Invisalign · Braces</p>
-          <div class="flex justify-center gap-3 mt-4 text-slateink/40">
-            <a href="#" class="social-ic"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-ic"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#" class="social-ic"><i class="fa-brands fa-facebook"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- Dentist Card 3 -->
-      <div class="dentist-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="dentist-photo"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80" alt="Dr. Maya Lin" loading="lazy"/></div>
-        <div class="p-5 text-center">
-          <h3 class="font-heading font-semibold text-lg text-charcoal">Dr. Maya Lin</h3>
-          <p class="text-sky-500 text-sm font-accent font-medium">Pediatric Dentist</p>
-          <p class="text-xs text-slateink/55 mt-2">DDS, Pediatric Dentistry · 9 yrs experience</p>
-          <p class="text-xs text-slateink/55 mt-1">Kids' Dentistry · Prevention</p>
-          <div class="flex justify-center gap-3 mt-4 text-slateink/40">
-            <a href="#" class="social-ic"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-ic"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#" class="social-ic"><i class="fa-brands fa-facebook"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- Dentist Card 4 -->
-      <div class="dentist-card" data-aos="fade-up" data-aos-delay="300">
-        <div class="dentist-photo"><img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=500&q=80&sat=-100" alt="Dr. Elias Navarro" loading="lazy"/></div>
-        <div class="p-5 text-center">
-          <h3 class="font-heading font-semibold text-lg text-charcoal">Dr. Elias Navarro</h3>
-          <p class="text-sky-500 text-sm font-accent font-medium">Oral Surgeon</p>
-          <p class="text-xs text-slateink/55 mt-2">DMD, Oral & Maxillofacial Surgery · 18 yrs experience</p>
-          <p class="text-xs text-slateink/55 mt-1">Implants · Wisdom Teeth</p>
-          <div class="flex justify-center gap-3 mt-4 text-slateink/40">
-            <a href="#" class="social-ic"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-ic"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#" class="social-ic"><i class="fa-brands fa-facebook"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="dentists-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7"></div>
   </div>
 </section>
 <!-- ================= SERVICES ================= -->
-<section id="services" class="py-24 lg:py-32 bg-white">
+<section id="services" class="py-16 sm:py-20 lg:py-32 bg-white">
   <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
       <span class="eyebrow">What We Offer</span>
       <h2 class="section-title mt-3">Comprehensive Dental Services</h2>
       <p class="mt-4 text-slateink/65 leading-relaxed">From routine cleanings to full smile transformations — advanced care for every stage of your dental journey.</p>
@@ -389,9 +328,9 @@
 </section>
 
 <!-- ================= WHY CHOOSE US ================= -->
-<section id="why-us" class="py-24 lg:py-32 section-alt">
+<section id="why-us" class="py-16 sm:py-20 lg:py-32 section-alt">
   <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
       <span class="eyebrow">Why Choose Us</span>
       <h2 class="section-title mt-3">Care Built Around You</h2>
     </div>
@@ -400,9 +339,9 @@
 </section>
 
 <!-- ================= BEFORE & AFTER ================= -->
-<section id="before-after" class="py-24 lg:py-32 bg-white">
+<section id="before-after" class="py-16 sm:py-20 lg:py-32 bg-white">
   <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
       <span class="eyebrow">Real Results</span>
       <h2 class="section-title mt-3">Before & After Transformations</h2>
       <p class="mt-4 text-slateink/65 leading-relaxed">Drag the slider to see the difference our treatments make.</p>
@@ -421,7 +360,7 @@
 </section>
 
 <!-- ================= GALLERY ================= -->
-<section id="gallery" class="py-24 lg:py-32 section-alt">
+<section id="gallery" class="py-16 sm:py-20 lg:py-32 section-alt">
   <div class="mx-auto max-w-7xl px-5 lg:px-8">
     <div class="text-center max-w-2xl mx-auto mb-10" data-aos="fade-up">
       <span class="eyebrow">Take a Look Inside</span>
@@ -445,9 +384,9 @@
 </div>
 
 <!-- ================= TESTIMONIALS ================= -->
-<section id="testimonials" class="py-24 lg:py-32 bg-white overflow-hidden">
+<section id="testimonials" class="py-16 sm:py-20 lg:py-32 bg-white overflow-hidden">
   <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
       <span class="eyebrow">Patient Love</span>
       <h2 class="section-title mt-3">What Our Patients Say</h2>
       <div class="flex items-center justify-center gap-2 mt-4">
@@ -465,7 +404,7 @@
   </div>
 </section>
 <!-- ================= BOOKING ================= -->
-<section id="booking" class="py-24 lg:py-32 relative overflow-hidden hero-gradient">
+<section id="booking" class="py-16 sm:py-20 lg:py-32 relative overflow-hidden hero-gradient">
   <div class="floating-shape shape-2" style="opacity:.5"></div>
   <div class="mx-auto max-w-5xl px-5 lg:px-8 relative">
     <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
@@ -544,9 +483,9 @@
 </div>
 
 <!-- ================= PROMOTIONS ================= -->
-<section id="promotions" class="py-24 lg:py-32 bg-white">
+<section id="promotions" class="py-16 sm:py-20 lg:py-32 bg-white">
   <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
       <span class="eyebrow">Special Offers</span>
       <h2 class="section-title mt-3">Current Promotions</h2>
     </div>
@@ -564,9 +503,9 @@
 </section>
 
 <!-- ================= FACILITIES ================= -->
-<section id="facilities" class="py-24 lg:py-32 bg-white">
+<section id="facilities" class="py-16 sm:py-20 lg:py-32 bg-white">
   <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
       <span class="eyebrow">Comfort & Convenience</span>
       <h2 class="section-title mt-3">Clinic Facilities</h2>
     </div>
@@ -575,8 +514,8 @@
 </section>
 
 <!-- ================= INFECTION CONTROL / VIRTUAL TOUR ================= -->
-<section class="py-24 lg:py-32 section-alt">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
+<section class="py-16 sm:py-20 lg:py-32 section-alt">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
     <div data-aos="fade-right">
       <span class="eyebrow">Your Safety First</span>
       <h2 class="section-title mt-3">Infection Control & Sterilization</h2>
@@ -600,8 +539,8 @@
 </section>
 
 <!-- ================= AWARDS / CSR ================= -->
-<section class="py-24 lg:py-32 bg-white">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-14">
+<section class="py-16 sm:py-20 lg:py-32 bg-white">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-14">
     <div data-aos="fade-up">
       <span class="eyebrow">Recognition</span>
       <h2 class="font-heading font-bold text-2xl lg:text-3xl text-charcoal mt-3 mb-6">Awards & Certifications</h2>
@@ -621,9 +560,9 @@
   </div>
 </section>
 <!-- ================= FAQ ================= -->
-<section id="faqs" class="py-24 lg:py-32 section-alt">
+<section id="faqs" class="py-16 sm:py-20 lg:py-32 section-alt">
   <div class="mx-auto max-w-3xl px-5 lg:px-8">
-    <div class="text-center mb-16" data-aos="fade-up">
+    <div class="text-center mb-12 sm:mb-16" data-aos="fade-up">
       <span class="eyebrow">Got Questions?</span>
       <h2 class="section-title mt-3">Frequently Asked Questions</h2>
     </div>
@@ -637,8 +576,8 @@
 </section>
 
 <!-- ================= PATIENT FORMS & FINANCING ================= -->
-<section class="py-24 lg:py-32 bg-white">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-14">
+<section class="py-16 sm:py-20 lg:py-32 bg-white">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-14">
     <div class="value-card !p-8" data-aos="fade-up">
       <i class="fa-solid fa-file-arrow-down text-sky-400"></i>
       <h3 class="text-lg">Patient Forms</h3>
@@ -663,9 +602,9 @@
 </section>
 
 <!-- ================= BLOG ================= -->
-<section id="blog" class="py-24 lg:py-32 section-alt">
+<section id="blog" class="py-16 sm:py-20 lg:py-32 section-alt">
   <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
       <span class="eyebrow">Dental Insights</span>
       <h2 class="section-title mt-3">Latest From Our Blog</h2>
     </div>
@@ -675,7 +614,7 @@
 
 <!-- ================= NEWSLETTER ================= -->
 <section class="py-16 bg-white">
-  <div class="mx-auto max-w-3xl px-5 lg:px-8 text-center glass-panel rounded-4xl p-10 shadow-soft" data-aos="zoom-in">
+  <div class="mx-auto max-w-3xl px-5 lg:px-8 text-center glass-panel rounded-4xl p-6 sm:p-10 shadow-soft" data-aos="zoom-in">
     <i class="fa-regular fa-envelope text-3xl text-sky-400 mb-4"></i>
     <h3 class="font-heading font-bold text-2xl text-charcoal mb-2">Stay in the Loop</h3>
     <p class="text-sm text-slateink/60 mb-6">Get dental tips, promo alerts, and clinic news straight to your inbox.</p>
@@ -687,50 +626,50 @@
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="py-24 lg:py-32 section-alt">
+<section id="contact" class="py-16 sm:py-20 lg:py-32 section-alt">
   <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
       <span class="eyebrow">Get In Touch</span>
       <h2 class="section-title mt-3">Visit or Contact Us</h2>
     </div>
 
-    <div class="grid lg:grid-cols-5 gap-8">
-      <div class="lg:col-span-2 space-y-4" data-aos="fade-right">
-        <div class="contact-card"><i class="fa-solid fa-location-dot text-sky-400"></i><div><h4>Clinic Address</h4><p>128 Wellness Avenue, Suite 300, San Francisco, CA 94105</p></div></div>
-        <div class="contact-card"><i class="fa-solid fa-phone text-mint-500"></i><div><h4>Phone</h4><p><a href="tel:+15551234567" class="hover:text-sky-500">+1 (555) 123-4567</a></p></div></div>
-        <div class="contact-card"><i class="fa-solid fa-mobile-screen text-sky-400"></i><div><h4>Mobile</h4><p><a href="tel:+15559876543" class="hover:text-sky-500">+1 (555) 987-6543</a></p></div></div>
-        <div class="contact-card"><i class="fa-regular fa-envelope text-mint-500"></i><div><h4>Email</h4><p><a href="mailto:hello@radiancedental.example" class="hover:text-sky-500">hello@radiancedental.example</a></p></div></div>
-        <div class="contact-card"><i class="fa-regular fa-clock text-sky-400"></i><div><h4>Clinic Hours</h4><p>Mon–Fri: 9AM–6PM · Sat: 9AM–2PM</p></div></div>
-        <div class="contact-card"><i class="fa-solid fa-triangle-exclamation text-rose-400"></i><div><h4>Emergency Contact</h4><p><a href="tel:+15551119999" class="hover:text-sky-500">+1 (555) 111-9999</a> (24/7)</p></div></div>
-        <div class="contact-card"><i class="fa-solid fa-square-parking text-mint-500"></i><div><h4>Parking</h4><p>Free basement parking for all patients</p></div></div>
+    <div class="grid lg:grid-cols-5 gap-6 lg:gap-8">
+      <div class="lg:col-span-2 space-y-3 sm:space-y-4" data-aos="fade-right">
+        <div class="contact-card"><i class="fa-solid fa-location-dot text-sky-400"></i><div><h4>Clinic Address</h4><p data-cms="contact.address">128 Wellness Avenue, Suite 300, San Francisco, CA 94105</p></div></div>
+        <div class="contact-card"><i class="fa-solid fa-phone text-mint-500"></i><div><h4>Phone</h4><p><a href="tel:+15551234567" class="hover:text-sky-500" data-cms-tel="contact.phone" data-cms="contact.phone">+1 (555) 123-4567</a></p></div></div>
+        <div class="contact-card"><i class="fa-solid fa-mobile-screen text-sky-400"></i><div><h4>Mobile</h4><p><a href="tel:+15559876543" class="hover:text-sky-500" data-cms-tel="contact.mobile" data-cms="contact.mobile">+1 (555) 987-6543</a></p></div></div>
+        <div class="contact-card"><i class="fa-regular fa-envelope text-mint-500"></i><div><h4>Email</h4><p><a href="mailto:hello@radiancedental.example" class="hover:text-sky-500" data-cms-mailto="contact.email" data-cms="contact.email">hello@radiancedental.example</a></p></div></div>
+        <div class="contact-card"><i class="fa-regular fa-clock text-sky-400"></i><div><h4>Clinic Hours</h4><p data-cms="contact.hours">Mon–Fri: 9AM–6PM · Sat: 9AM–2PM</p></div></div>
+        <div class="contact-card"><i class="fa-solid fa-triangle-exclamation text-rose-400"></i><div><h4>Emergency Contact</h4><p><a href="tel:+15551119999" class="hover:text-sky-500" data-cms-tel="contact.emergencyPhone" data-cms="contact.emergencyPhone">+1 (555) 111-9999</a> (24/7)</p></div></div>
+        <div class="contact-card"><i class="fa-solid fa-square-parking text-mint-500"></i><div><h4>Parking</h4><p data-cms="contact.parkingNote">Free basement parking for all patients</p></div></div>
         <div class="flex gap-3 pt-2">
-          <a href="#" class="chip-btn"><i class="fa-brands fa-facebook-messenger text-sky-500"></i> Messenger</a>
-          <a href="#" class="chip-btn"><i class="fa-brands fa-whatsapp text-mint-500"></i> WhatsApp</a>
+          <a href="#" class="chip-btn" data-cms-href="social.messenger"><i class="fa-brands fa-facebook-messenger text-sky-500"></i> Messenger</a>
+          <a href="#" class="chip-btn" data-cms-href="social.whatsapp"><i class="fa-brands fa-whatsapp text-mint-500"></i> WhatsApp</a>
         </div>
       </div>
 
       <div class="lg:col-span-3 space-y-5" data-aos="fade-left">
-        <div class="rounded-4xl overflow-hidden shadow-soft h-72 lg:h-full min-h-[320px]">
-          <iframe title="Clinic location map" src="https://www.google.com/maps?q=San+Francisco+dental+clinic&output=embed" width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="rounded-4xl overflow-hidden shadow-soft h-64 sm:h-72 lg:h-full min-h-[280px] sm:min-h-[320px]">
+          <iframe title="Clinic location map" id="map-embed" data-cms-src="contact.mapEmbedUrl" src="https://www.google.com/maps?q=San+Francisco+dental+clinic&output=embed" width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
   </div>
 </section>
 <!-- ================= FOOTER ================= -->
-<footer class="bg-charcoal text-white/80 pt-20 pb-8 relative overflow-hidden">
+<footer class="bg-charcoal text-white/80 pt-16 sm:pt-20 pb-24 sm:pb-8 relative overflow-hidden">
   <div class="mx-auto max-w-7xl px-5 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
     <div>
       <a href="#home" class="flex items-center gap-2 font-heading font-bold text-xl text-white mb-4">
         <span class="w-10 h-10 rounded-2xl bg-gradient-to-br from-sky-300 to-mint-300 flex items-center justify-center"><i class="fa-solid fa-tooth text-white"></i></span>
         Radiance <span class="font-light text-white/50">Dental</span>
       </a>
-      <p class="text-sm text-white/50 leading-relaxed mb-5">Premium dental care delivered with compassion, precision, and modern technology.</p>
+      <p class="text-sm text-white/50 leading-relaxed mb-5" data-cms="footer.tagline">Premium dental care delivered with compassion, precision, and modern technology.</p>
       <div class="flex gap-3">
-        <a href="#" class="footer-social"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" class="footer-social"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" class="footer-social"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="#" class="footer-social"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="footer-social" data-cms-href="social.facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="footer-social" data-cms-href="social.instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="footer-social" data-cms-href="social.tiktok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" class="footer-social" data-cms-href="social.youtube"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
     <div>
@@ -777,7 +716,7 @@
 </footer>
 
 <!-- ================= FLOATING ACTION BUTTONS ================= -->
-<div class="fixed z-40 bottom-6 right-6 flex flex-col items-end gap-3" id="floating-actions">
+<div class="fixed z-40 bottom-24 right-4 sm:bottom-6 sm:right-6 flex flex-col items-end gap-3" id="floating-actions">
   <div id="fab-menu" class="flex flex-col items-end gap-3 mb-1">
     <a href="tel:+15551234567" class="fab-btn bg-sky-500" title="Call Us"><i class="fa-solid fa-phone"></i></a>
     <a href="#" class="fab-btn bg-[#0084ff]" title="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
@@ -788,12 +727,12 @@
 </div>
 
 <!-- Back to top -->
-<button id="back-to-top" class="fixed z-40 bottom-6 left-6 w-11 h-11 rounded-full bg-white shadow-soft flex items-center justify-center text-slateink/60 opacity-0 pointer-events-none transition-all hover:text-sky-500">
+<button id="back-to-top" class="fixed z-40 bottom-24 left-4 sm:bottom-6 sm:left-6 w-11 h-11 rounded-full bg-white shadow-soft flex items-center justify-center text-slateink/60 opacity-0 pointer-events-none transition-all hover:text-sky-500">
   <i class="fa-solid fa-arrow-up"></i>
 </button>
 
 <!-- Chatbot Widget -->
-<div id="chatbot" class="fixed z-40 bottom-24 left-6 hidden w-80 max-w-[85vw] rounded-4xl shadow-soft overflow-hidden bg-white border border-slateink/5">
+<div id="chatbot" class="fixed z-40 bottom-[172px] left-4 right-4 sm:bottom-24 sm:left-6 sm:right-auto hidden w-auto sm:w-80 max-w-full sm:max-w-[85vw] rounded-4xl shadow-soft overflow-hidden bg-white border border-slateink/5">
   <div class="bg-gradient-to-r from-sky-400 to-mint-400 p-4 flex items-center gap-3 text-white">
     <i class="fa-solid fa-robot text-lg"></i>
     <div><p class="font-heading font-semibold text-sm">Radiance Assistant</p><p class="text-[11px] opacity-80">Online · Replies instantly</p></div>
@@ -828,5 +767,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
+
+<!-- Netlify Identity: only relevant if you use the Decap CMS admin panel at /admin —
+     this redirects users back to /admin after they click an invite/confirmation email link. -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', user => {
+      if (!user) {
+        window.netlifyIdentity.on('login', () => {
+          document.location.href = '/admin/';
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>

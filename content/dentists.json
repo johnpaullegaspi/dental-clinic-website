@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "name": "Dr. Amara Reyes",
+      "position": "Lead Cosmetic Dentist",
+      "qualifications": "DDS, Cosmetic & Restorative Dentistry",
+      "experienceYears": 14,
+      "specializations": "Veneers · Smile Makeovers",
+      "photo": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=500&q=80",
+      "instagram": "#",
+      "linkedin": "#",
+      "facebook": "#"
+    },
+    {
+      "name": "Dr. Daniel Cruz",
+      "position": "Orthodontic Specialist",
+      "qualifications": "DMD, Orthodontics",
+      "experienceYears": 11,
+      "specializations": "Invisalign · Braces",
+      "photo": "https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=500&q=80",
+      "instagram": "#",
+      "linkedin": "#",
+      "facebook": "#"
+    },
+    {
+      "name": "Dr. Maya Lin",
+      "position": "Pediatric Dentist",
+      "qualifications": "DDS, Pediatric Dentistry",
+      "experienceYears": 9,
+      "specializations": "Kids' Dentistry · Prevention",
+      "photo": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80",
+      "instagram": "#",
+      "linkedin": "#",
+      "facebook": "#"
+    },
+    {
+      "name": "Dr. Elias Navarro",
+      "position": "Oral Surgeon",
+      "qualifications": "DMD, Oral & Maxillofacial Surgery",
+      "experienceYears": 18,
+      "specializations": "Implants · Wisdom Teeth",
+      "photo": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=500&q=80&sat=-100",
+      "instagram": "#",
+      "linkedin": "#",
+      "facebook": "#"
+    }
+  ]
+}

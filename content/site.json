@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "badge": "Premium Dental Care Since 2008",
+    "headlinePrefix": "Your Smile Deserves",
+    "headlineHighlight": "Exceptional Care",
+    "subheadline": "Providing world-class dental treatments with compassion, precision, and modern technology — in a space designed for your comfort.",
+    "heroImage": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=80"
+  },
+  "about": {
+    "introText": "For over 16 years, Radiance Dental Studio has combined advanced technology with genuine, personal care — creating a space where every patient feels seen, safe, and confident in their smile.",
+    "mission": { "title": "Our Mission", "text": "Deliver exceptional, personalized dental care that improves confidence and long-term oral health." },
+    "vision": { "title": "Our Vision", "text": "To be the region's most trusted name in modern, comfortable, and compassionate dentistry." },
+    "values": { "title": "Our Values", "text": "Integrity, empathy, precision, and continuous innovation guide everything we do." },
+    "facilities": { "title": "Modern Facilities", "text": "State-of-the-art equipment in a calming, spa-inspired environment." },
+    "stats": { "patientsServed": 18000, "yearsExperience": 16, "treatmentsCompleted": 42000, "satisfactionRate": 99 }
+  },
+  "contact": {
+    "address": "128 Wellness Avenue, Suite 300, San Francisco, CA 94105",
+    "phone": "+1 (555) 123-4567",
+    "mobile": "+1 (555) 987-6543",
+    "email": "hello@radiancedental.example",
+    "hours": "Mon–Fri: 9AM–6PM · Sat: 9AM–2PM",
+    "emergencyPhone": "+1 (555) 111-9999",
+    "parkingNote": "Free basement parking for all patients",
+    "mapEmbedUrl": "https://www.google.com/maps?q=San+Francisco+dental+clinic&output=embed"
+  },
+  "social": {
+    "facebook": "#",
+    "instagram": "#",
+    "tiktok": "#",
+    "youtube": "#",
+    "messenger": "#",
+    "whatsapp": "#"
+  },
+  "footer": {
+    "tagline": "Premium dental care delivered with compassion, precision, and modern technology."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "name": "Sarah Jimenez", "photo": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80", "rating": 5, "treatment": "Smile Makeover", "review": "Absolutely the best dental experience I've ever had. The team made me feel comfortable from start to finish, and my smile has never looked better!" },
+    { "name": "Marcus Tan", "photo": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=100&q=80", "rating": 5, "treatment": "Dental Implants", "review": "Professional, gentle, and truly caring. Dr. Navarro explained every step and the results exceeded my expectations." },
+    { "name": "Elena Cruz", "photo": "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?auto=format&fit=crop&w=100&q=80", "rating": 5, "treatment": "Invisalign", "review": "My Invisalign journey here was smooth and well-managed. The clinic itself feels more like a spa than a dental office!" },
+    { "name": "James Wu", "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80", "rating": 5, "treatment": "Teeth Whitening", "review": "Quick, painless, and the results were dramatic. Highly recommend Radiance Dental to anyone looking for quality care." },
+    { "name": "Priya Santos", "photo": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=100&q=80", "rating": 5, "treatment": "Kids' Dentistry", "review": "My daughter used to be terrified of dentists — Dr. Lin changed that completely. So patient and kind with children." }
+  ]
+}

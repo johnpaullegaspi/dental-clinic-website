@@ -1,0 +1,24 @@
+{
+  "items": [
+    { "icon": "fa-tooth", "name": "General Dentistry", "desc": "Comprehensive checkups and preventive care for lifelong oral health." },
+    { "icon": "fa-brush", "name": "Teeth Cleaning", "desc": "Professional cleaning to remove plaque and keep your smile fresh." },
+    { "icon": "fa-hand-sparkles", "name": "Oral Prophylaxis", "desc": "Deep cleaning treatment to prevent gum disease and decay." },
+    { "icon": "fa-tooth", "name": "Tooth Extraction", "desc": "Gentle, precise extractions performed with modern pain management." },
+    { "icon": "fa-fill-drip", "name": "Fillings", "desc": "Tooth-colored fillings that restore strength and natural appearance." },
+    { "icon": "fa-syringe", "name": "Root Canal Treatment", "desc": "Pain-free root canal therapy to save and protect your natural tooth." },
+    { "icon": "fa-crown", "name": "Dental Crowns", "desc": "Custom crowns crafted to restore function and a natural look." },
+    { "icon": "fa-grip-lines", "name": "Dental Bridges", "desc": "Reliable solutions to replace missing teeth and restore your bite." },
+    { "icon": "fa-teeth", "name": "Dentures", "desc": "Comfortable, natural-looking dentures tailored to your smile." },
+    { "icon": "fa-screwdriver-wrench", "name": "Dental Implants", "desc": "Permanent, natural-feeling replacements for missing teeth." },
+    { "icon": "fa-gem", "name": "Veneers", "desc": "Ultra-thin shells that transform the shape, size, and color of teeth." },
+    { "icon": "fa-sun", "name": "Teeth Whitening", "desc": "Professional whitening for a brighter smile in just one visit." },
+    { "icon": "fa-align-center", "name": "Invisalign", "desc": "Clear, comfortable aligners for a straighter smile — no metal brackets." },
+    { "icon": "fa-teeth-open", "name": "Orthodontics", "desc": "Braces and aligner solutions for patients of every age." },
+    { "icon": "fa-child", "name": "Pediatric Dentistry", "desc": "Gentle, friendly dental care designed especially for kids." },
+    { "icon": "fa-wand-magic-sparkles", "name": "Cosmetic Dentistry", "desc": "Aesthetic treatments to enhance and perfect your natural smile." },
+    { "icon": "fa-tooth", "name": "Wisdom Tooth Removal", "desc": "Safe, comfortable extraction of impacted or problematic wisdom teeth." },
+    { "icon": "fa-kit-medical", "name": "Emergency Dental Care", "desc": "Prompt relief and treatment when dental emergencies strike." },
+    { "icon": "fa-heart-pulse", "name": "Gum Treatment", "desc": "Advanced periodontal therapy to protect gum health." },
+    { "icon": "fa-face-smile-beam", "name": "Smile Makeover", "desc": "A fully personalized plan to design and achieve your dream smile." }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "question": "Do you accept walk-ins?", "answer": "Yes, we welcome walk-ins whenever possible, though we recommend booking an appointment to guarantee your preferred time slot." },
+    { "question": "How often should I visit the dentist?", "answer": "We recommend a checkup and cleaning every six months to maintain optimal oral health, though your dentist may suggest a different schedule based on your needs." },
+    { "question": "Do you offer payment plans?", "answer": "Yes, we offer flexible 0% interest installment plans for most major treatments. Speak with our front desk team for details." },
+    { "question": "What insurance do you accept?", "answer": "We accept most major insurance providers including Delta Dental, MetLife, Cigna, Aetna, Guardian, and United Healthcare." },
+    { "question": "How long does teeth whitening take?", "answer": "In-office professional whitening typically takes about 60–90 minutes and delivers immediate, visible results." },
+    { "question": "What should I do in a dental emergency?", "answer": "Call our 24/7 emergency line immediately at +1 (555) 111-9999. For knocked-out teeth, keep the tooth moist and come in as soon as possible." }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "badge": "Limited Time", "title": "20% Off Teeth Whitening", "desc": "Brighten your smile this month with our professional whitening treatment.", "color": "sky" },
+    { "badge": "New Patients", "title": "Free Dental Consultation", "desc": "Book your first visit and receive a complimentary consultation and X-ray.", "color": "mint" },
+    { "badge": "Family Package", "title": "Family Dental Packages", "desc": "Bundle checkups and cleanings for the whole family at a special rate.", "color": "amber" },
+    { "badge": "Students", "title": "Student Discount — 15% Off", "desc": "Show your student ID and save on general dentistry services.", "color": "violet" },
+    { "badge": "Seniors", "title": "Senior Citizen Discount", "desc": "Special pricing and priority scheduling for our senior patients.", "color": "rose" },
+    { "badge": "Ongoing", "title": "Refer & Earn Rewards", "desc": "Refer a friend and both of you receive a treatment credit.", "color": "emerald" }
+  ]
+}
