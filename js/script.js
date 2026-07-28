@@ -300,12 +300,39 @@ document.addEventListener('DOMContentLoaded', () => {
     darkToggle.innerHTML = isDark ? '<i class="fa-solid fa-sun text-amber-300"></i>' : '<i class="fa-solid fa-moon text-slateink/70"></i>';
   });
 
-  /* ---------------- Cookie Consent ---------------- */
+  /* ---------------- Cookie Consent ----------------
+     Two bugs fixed here:
+     1. There was no persistence at all — every single page load (refresh,
+        revisit, new tab) showed the banner again from scratch even after a
+        visitor had already clicked Accept/Decline, which reads as "the
+        dialog won't go away" even though each individual click DID work.
+        Now the choice is saved to localStorage and checked before ever
+        showing the banner again.
+     2. The dismiss only ever toggled a CSS transform class. On some mobile
+        browsers (notably iOS Safari), a `position: fixed` element that also
+        has a backdrop-blur (see `.glass-panel`) can fail to repaint cleanly
+        mid-transition, so it can visually/interactively appear "stuck" even
+        though the class did change. Dismiss now also flips `pointer-events`
+        immediately (so it can never block taps underneath, regardless of
+        how it's rendering) and fully removes the banner from layout after
+        the transition finishes, instead of relying on the transform alone. */
   const cookieBanner = document.getElementById('cookie-banner');
-  setTimeout(() => cookieBanner.classList.remove('translate-y-full'), 1200);
-  function dismissCookie() { cookieBanner.classList.add('translate-y-full'); }
-  document.getElementById('cookie-accept').addEventListener('click', dismissCookie);
-  document.getElementById('cookie-decline').addEventListener('click', dismissCookie);
+  const COOKIE_CONSENT_KEY = 'radiance-cookie-consent';
+  let savedConsent = null;
+  try { savedConsent = localStorage.getItem(COOKIE_CONSENT_KEY); } catch (e) { /* localStorage may be blocked (private mode, etc.) — fall back to always showing */ }
+
+  if (!savedConsent) {
+    setTimeout(() => cookieBanner.classList.remove('translate-y-full'), 1200);
+  }
+
+  function dismissCookie(choice) {
+    try { localStorage.setItem(COOKIE_CONSENT_KEY, choice); } catch (e) { /* ignore — worst case it re-prompts next visit */ }
+    cookieBanner.classList.add('translate-y-full');
+    cookieBanner.style.pointerEvents = 'none';
+    setTimeout(() => { cookieBanner.style.display = 'none'; }, 600); // matches duration-500 + buffer
+  }
+  document.getElementById('cookie-accept').addEventListener('click', () => dismissCookie('accepted'));
+  document.getElementById('cookie-decline').addEventListener('click', () => dismissCookie('declined'));
 
   /* ---------------- Animated Counters ---------------- */
   const counterObserver = new IntersectionObserver((entries) => {
