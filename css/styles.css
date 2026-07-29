@@ -46,7 +46,7 @@ img { user-select: none; -webkit-user-drag: none; }
   justify-content: center;
   text-align: center;
   white-space: nowrap;
-  padding: .55rem .75rem;
+  padding: .5rem .5rem;
   border-radius: 999px;
   color: var(--slateink);
   opacity: .8;
@@ -56,6 +56,16 @@ img { user-select: none; -webkit-user-drag: none; }
 .mobile-link { padding: .9rem .25rem; border-bottom: 1px solid rgba(63,71,83,0.06); font-family: 'Manrope',sans-serif; font-weight: 500; color: var(--slateink); }
 #mobile-menu.open { display: block; }
 #mobile-menu.open #mobile-menu-panel { transform: translateX(0); }
+
+/* Hides the FAB stack / back-to-top button while the cookie banner is
+   visible, so nothing else sits in that bottom-right corner to accidentally
+   tap instead of Accept/Decline (see js/script.js "Cookie Consent" comment
+   for the full explanation). #back-to-top.show (below, higher specificity
+   because it's ID-qualified) would otherwise win over a plain class when
+   the page has also been scrolled past 500px — so this needs the matching
+   ID + double-class form to reliably beat it regardless of source order. */
+.fab-hidden-for-cookie { opacity: 0; pointer-events: none; transform: translateY(12px); transition: opacity .3s var(--ease), transform .3s var(--ease); }
+#back-to-top.show.fab-hidden-for-cookie { opacity: 0; pointer-events: none; }
 
 /* ---------------- Buttons ---------------- */
 .btn-primary {
@@ -135,7 +145,20 @@ img { user-select: none; -webkit-user-drag: none; }
 
 /* ---------------- Stats ---------------- */
 .stat-card { text-align: center; background: white; border-radius: 1.75rem; padding: 1.75rem 1rem; box-shadow: 0 4px 20px -8px rgba(63,90,120,0.08); }
-.stat-card span { display: block; font-family: 'Manrope',sans-serif; font-size: .78rem; color: rgba(63,71,83,0.55); margin-top: .35rem; }
+/* 2026-07-30: labels ("Patients Served", "Years of Experience", "Treatments
+   Completed", "Satisfaction Rate") were .78rem (~12.5px) at 55% opacity —
+   too small/low-contrast to read comfortably next to the big number above
+   them. Bumped size and contrast for all four (they share this one rule). */
+/* Direct-child combinator (not a plain descendant selector) on purpose:
+   "16" and "99" are wrapped in their own <span class="counter"> nested
+   inside the big <p> number (so the counter-up animation has something to
+   target), sitting right next to a literal "+" or "%" character in that
+   same <p>. A plain ".stat-card span" rule matches that nested counter
+   span too, and its display:block forced "16"/"99" onto their own line
+   with the "+"/"%" wrapping onto a second line by itself. Scoping to just
+   the direct-child label span (the ">") fixes it without touching the
+   counter span's own inline layout. */
+.stat-card > span { display: block; font-family: 'Manrope',sans-serif; font-weight: 500; font-size: .95rem; color: rgba(63,71,83,0.75); margin-top: .5rem; }
 
 /* ---------------- Dentist cards ---------------- */
 .dentist-card {

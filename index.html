@@ -138,7 +138,22 @@
         Radiance <span class="font-light text-slateink/60">Dental</span>
       </a>
 
-      <ul id="nav-links" class="hidden lg:flex items-center gap-1 font-accent text-[14.5px] font-medium">
+      <!-- 2026-07-30: this list is 11 items — measured against the live
+           site, it needs ~930px on its own, and the full header (logo +
+           this list + the right-side controls) needs ~1340px total. Because
+           the header is capped at max-w-7xl (1280px) like the rest of the
+           site, that never fully fits — at "lg" (1024px, the old
+           breakpoint) it was overflowing the header and getting visually
+           cut off/overlapping the page below it well before reaching
+           desktop widths too. Two changes fix this together: the links
+           themselves are a bit more compact now (tighter padding, no extra
+           gap, 13px instead of 14.5px), and the breakpoint that switches
+           from the hamburger panel to this full row moved from lg (1024px)
+           to xl (1280px) — exactly the header's own max width, so it only
+           ever shows once there's actually room. Below that, everything
+           (tablet and most laptop widths included) reliably gets the
+           slide-out panel instead of a cramped/overlapping row. -->
+      <ul id="nav-links" class="hidden xl:flex items-center font-accent text-[13px] font-medium">
         <li><a href="#home" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
@@ -159,7 +174,7 @@
         <a href="#booking" class="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-sky-400 to-mint-400 text-white font-accent font-semibold text-sm px-5 py-2.5 rounded-full shadow-softer hover:shadow-glow hover:-translate-y-0.5 transition-all">
           <i class="fa-regular fa-calendar-check"></i> Book Appointment
         </a>
-        <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-slateink/5 transition" aria-label="Open menu">
+        <button id="mobile-menu-btn" class="xl:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-slateink/5 transition" aria-label="Open menu">
           <i class="fa-solid fa-bars text-lg"></i>
         </button>
       </div>
@@ -167,7 +182,7 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="lg:hidden fixed inset-0 z-[55] hidden">
+  <div id="mobile-menu" class="xl:hidden fixed inset-0 z-[55] hidden">
     <div class="absolute inset-0 bg-slateink/40 backdrop-blur-sm" id="mobile-menu-overlay"></div>
     <div class="absolute right-0 top-0 h-full w-[82%] max-w-sm bg-white shadow-2xl p-6 flex flex-col gap-1 overflow-y-auto translate-x-full transition-transform duration-400" id="mobile-menu-panel">
       <div class="flex items-center justify-between mb-6">
@@ -767,20 +782,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
-
-<!-- Netlify Identity: only relevant if you use the Decap CMS admin panel at /admin —
-     this redirects users back to /admin after they click an invite/confirmation email link. -->
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on('init', user => {
-      if (!user) {
-        window.netlifyIdentity.on('login', () => {
-          document.location.href = '/admin/';
-        });
-      }
-    });
-  }
-</script>
 </body>
 </html>
