@@ -1,8 +1,0 @@
-{
-  "items": [
-    { "category": "veneers", "label": "Porcelain Veneers", "beforeImage": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=700&q=60&sat=-100&blur=1", "afterImage": "https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=700&q=80" },
-    { "category": "whitening", "label": "Teeth Whitening", "beforeImage": "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=700&q=60&sat=-100&blur=1", "afterImage": "https://images.unsplash.com/photo-1517840901100-8179e982acb7?auto=format&fit=crop&w=700&q=80" },
-    { "category": "braces", "label": "Orthodontic Braces", "beforeImage": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=700&q=60&sat=-100&blur=1", "afterImage": "https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&w=700&q=80" },
-    { "category": "makeover", "label": "Full Smile Makeover", "beforeImage": "https://images.unsplash.com/photo-1609840114035-3c981b782dcf?auto=format&fit=crop&w=700&q=60&sat=-100&blur=1", "afterImage": "https://images.unsplash.com/photo-1580281657702-257584239a55?auto=format&fit=crop&w=700&q=80" }
-  ]
-}

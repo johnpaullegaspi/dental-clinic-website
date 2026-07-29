@@ -8,11 +8,28 @@
   },
   "about": {
     "introText": "For over 16 years, Radiance Dental Studio has combined advanced technology with genuine, personal care — creating a space where every patient feels seen, safe, and confident in their smile.",
-    "mission": { "title": "Our Mission", "text": "Deliver exceptional, personalized dental care that improves confidence and long-term oral health." },
-    "vision": { "title": "Our Vision", "text": "To be the region's most trusted name in modern, comfortable, and compassionate dentistry." },
-    "values": { "title": "Our Values", "text": "Integrity, empathy, precision, and continuous innovation guide everything we do." },
-    "facilities": { "title": "Modern Facilities", "text": "State-of-the-art equipment in a calming, spa-inspired environment." },
-    "stats": { "patientsServed": 18000, "yearsExperience": 16, "treatmentsCompleted": 42000, "satisfactionRate": 99 }
+    "mission": {
+      "title": "Our Mission",
+      "text": "Deliver exceptional, personalized dental care that improves confidence and long-term oral health."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "To be the region's most trusted name in modern, comfortable, and compassionate dentistry."
+    },
+    "values": {
+      "title": "Our Values",
+      "text": "Integrity, empathy, precision, and continuous innovation guide everything we do."
+    },
+    "facilities": {
+      "title": "Modern Facilities",
+      "text": "State-of-the-art equipment in a calming, spa-inspired environment."
+    },
+    "stats": {
+      "patientsServed": 18000,
+      "yearsExperience": 16,
+      "treatmentsCompleted": 42000,
+      "satisfactionRate": 99
+    }
   },
   "contact": {
     "address": "128 Wellness Avenue, Suite 300, San Francisco, CA 94105",
@@ -34,5 +51,508 @@
   },
   "footer": {
     "tagline": "Premium dental care delivered with compassion, precision, and modern technology."
-  }
+  },
+  "services": [
+    {
+      "icon": "fa-tooth",
+      "name": "General Dentistry",
+      "desc": "Comprehensive checkups and preventive care for lifelong oral health."
+    },
+    {
+      "icon": "fa-brush",
+      "name": "Teeth Cleaning",
+      "desc": "Professional cleaning to remove plaque and keep your smile fresh."
+    },
+    {
+      "icon": "fa-hand-sparkles",
+      "name": "Oral Prophylaxis",
+      "desc": "Deep cleaning treatment to prevent gum disease and decay."
+    },
+    {
+      "icon": "fa-tooth",
+      "name": "Tooth Extraction",
+      "desc": "Gentle, precise extractions performed with modern pain management."
+    },
+    {
+      "icon": "fa-fill-drip",
+      "name": "Fillings",
+      "desc": "Tooth-colored fillings that restore strength and natural appearance."
+    },
+    {
+      "icon": "fa-syringe",
+      "name": "Root Canal Treatment",
+      "desc": "Pain-free root canal therapy to save and protect your natural tooth."
+    },
+    {
+      "icon": "fa-crown",
+      "name": "Dental Crowns",
+      "desc": "Custom crowns crafted to restore function and a natural look."
+    },
+    {
+      "icon": "fa-grip-lines",
+      "name": "Dental Bridges",
+      "desc": "Reliable solutions to replace missing teeth and restore your bite."
+    },
+    {
+      "icon": "fa-teeth",
+      "name": "Dentures",
+      "desc": "Comfortable, natural-looking dentures tailored to your smile."
+    },
+    {
+      "icon": "fa-screwdriver-wrench",
+      "name": "Dental Implants",
+      "desc": "Permanent, natural-feeling replacements for missing teeth."
+    },
+    {
+      "icon": "fa-gem",
+      "name": "Veneers",
+      "desc": "Ultra-thin shells that transform the shape, size, and color of teeth."
+    },
+    {
+      "icon": "fa-sun",
+      "name": "Teeth Whitening",
+      "desc": "Professional whitening for a brighter smile in just one visit."
+    },
+    {
+      "icon": "fa-align-center",
+      "name": "Invisalign",
+      "desc": "Clear, comfortable aligners for a straighter smile — no metal brackets."
+    },
+    {
+      "icon": "fa-teeth-open",
+      "name": "Orthodontics",
+      "desc": "Braces and aligner solutions for patients of every age."
+    },
+    {
+      "icon": "fa-child",
+      "name": "Pediatric Dentistry",
+      "desc": "Gentle, friendly dental care designed especially for kids."
+    },
+    {
+      "icon": "fa-wand-magic-sparkles",
+      "name": "Cosmetic Dentistry",
+      "desc": "Aesthetic treatments to enhance and perfect your natural smile."
+    },
+    {
+      "icon": "fa-tooth",
+      "name": "Wisdom Tooth Removal",
+      "desc": "Safe, comfortable extraction of impacted or problematic wisdom teeth."
+    },
+    {
+      "icon": "fa-kit-medical",
+      "name": "Emergency Dental Care",
+      "desc": "Prompt relief and treatment when dental emergencies strike."
+    },
+    {
+      "icon": "fa-heart-pulse",
+      "name": "Gum Treatment",
+      "desc": "Advanced periodontal therapy to protect gum health."
+    },
+    {
+      "icon": "fa-face-smile-beam",
+      "name": "Smile Makeover",
+      "desc": "A fully personalized plan to design and achieve your dream smile."
+    }
+  ],
+  "dentists": [
+    {
+      "name": "Dr. Amara Reyes",
+      "position": "Lead Cosmetic Dentist",
+      "qualifications": "DDS, Cosmetic & Restorative Dentistry",
+      "experienceYears": 14,
+      "specializations": "Veneers · Smile Makeovers",
+      "photo": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=500&q=80",
+      "instagram": "#",
+      "linkedin": "#",
+      "facebook": "#"
+    },
+    {
+      "name": "Dr. Daniel Cruz",
+      "position": "Orthodontic Specialist",
+      "qualifications": "DMD, Orthodontics",
+      "experienceYears": 11,
+      "specializations": "Invisalign · Braces",
+      "photo": "https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=500&q=80",
+      "instagram": "#",
+      "linkedin": "#",
+      "facebook": "#"
+    },
+    {
+      "name": "Dr. Maya Lin",
+      "position": "Pediatric Dentist",
+      "qualifications": "DDS, Pediatric Dentistry",
+      "experienceYears": 9,
+      "specializations": "Kids' Dentistry · Prevention",
+      "photo": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80",
+      "instagram": "#",
+      "linkedin": "#",
+      "facebook": "#"
+    },
+    {
+      "name": "Dr. Elias Navarro",
+      "position": "Oral Surgeon",
+      "qualifications": "DMD, Oral & Maxillofacial Surgery",
+      "experienceYears": 18,
+      "specializations": "Implants · Wisdom Teeth",
+      "photo": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=500&q=80&sat=-100",
+      "instagram": "#",
+      "linkedin": "#",
+      "facebook": "#"
+    }
+  ],
+  "whyUs": [
+    {
+      "icon": "fa-microscope",
+      "title": "Modern Equipment"
+    },
+    {
+      "icon": "fa-user-doctor",
+      "title": "Experienced Dentists"
+    },
+    {
+      "icon": "fa-tags",
+      "title": "Affordable Prices"
+    },
+    {
+      "icon": "fa-face-smile",
+      "title": "Pain-Free Procedures"
+    },
+    {
+      "icon": "fa-hand-holding-heart",
+      "title": "Personalized Care"
+    },
+    {
+      "icon": "fa-couch",
+      "title": "Comfortable Clinic"
+    },
+    {
+      "icon": "fa-calendar-days",
+      "title": "Flexible Scheduling"
+    },
+    {
+      "icon": "fa-spray-can-sparkles",
+      "title": "Sterilized Equipment"
+    },
+    {
+      "icon": "fa-x-ray",
+      "title": "Digital X-Ray"
+    },
+    {
+      "icon": "fa-bolt",
+      "title": "Latest Technology"
+    }
+  ],
+  "beforeAfter": [
+    {
+      "category": "veneers",
+      "label": "Porcelain Veneers",
+      "beforeImage": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=700&q=60&sat=-100&blur=1",
+      "afterImage": "https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+      "category": "whitening",
+      "label": "Teeth Whitening",
+      "beforeImage": "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=700&q=60&sat=-100&blur=1",
+      "afterImage": "https://images.unsplash.com/photo-1517840901100-8179e982acb7?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+      "category": "braces",
+      "label": "Orthodontic Braces",
+      "beforeImage": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=700&q=60&sat=-100&blur=1",
+      "afterImage": "https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+      "category": "makeover",
+      "label": "Full Smile Makeover",
+      "beforeImage": "https://images.unsplash.com/photo-1609840114035-3c981b782dcf?auto=format&fit=crop&w=700&q=60&sat=-100&blur=1",
+      "afterImage": "https://images.unsplash.com/photo-1580281657702-257584239a55?auto=format&fit=crop&w=700&q=80"
+    }
+  ],
+  "gallery": [
+    {
+      "category": "interior",
+      "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80",
+      "height": 380,
+      "label": "Clinic Interior"
+    },
+    {
+      "category": "team",
+      "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80",
+      "height": 300,
+      "label": "Our Friendly Team"
+    },
+    {
+      "category": "interior",
+      "image": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80",
+      "height": 440,
+      "label": "Treatment Room"
+    },
+    {
+      "category": "procedures",
+      "image": "https://images.unsplash.com/photo-1609840114035-3c981b782dcf?auto=format&fit=crop&w=600&q=80",
+      "height": 340,
+      "label": "Modern Equipment"
+    },
+    {
+      "category": "patients",
+      "image": "https://images.unsplash.com/photo-1517840901100-8179e982acb7?auto=format&fit=crop&w=600&q=80",
+      "height": 300,
+      "label": "Smiling Patient"
+    },
+    {
+      "category": "interior",
+      "image": "https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=600&q=80",
+      "height": 400,
+      "label": "Waiting Area"
+    },
+    {
+      "category": "procedures",
+      "image": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80",
+      "height": 360,
+      "label": "Dental Procedure"
+    },
+    {
+      "category": "team",
+      "image": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80",
+      "height": 420,
+      "label": "Dentist On Duty"
+    },
+    {
+      "category": "patients",
+      "image": "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=600&q=80",
+      "height": 320,
+      "label": "Happy Patient"
+    },
+    {
+      "category": "interior",
+      "image": "https://images.unsplash.com/photo-1583912267550-d6c2ac3196c0?auto=format&fit=crop&w=600&q=80",
+      "height": 300,
+      "label": "Reception Desk"
+    },
+    {
+      "category": "procedures",
+      "image": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80",
+      "height": 380,
+      "label": "Precision Care"
+    },
+    {
+      "category": "team",
+      "image": "https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=600&q=80",
+      "height": 340,
+      "label": "Specialist Team"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Sarah Jimenez",
+      "photo": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80",
+      "rating": 5,
+      "treatment": "Smile Makeover",
+      "review": "Absolutely the best dental experience I've ever had. The team made me feel comfortable from start to finish, and my smile has never looked better!"
+    },
+    {
+      "name": "Marcus Tan",
+      "photo": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=100&q=80",
+      "rating": 5,
+      "treatment": "Dental Implants",
+      "review": "Professional, gentle, and truly caring. Dr. Navarro explained every step and the results exceeded my expectations."
+    },
+    {
+      "name": "Elena Cruz",
+      "photo": "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?auto=format&fit=crop&w=100&q=80",
+      "rating": 5,
+      "treatment": "Invisalign",
+      "review": "My Invisalign journey here was smooth and well-managed. The clinic itself feels more like a spa than a dental office!"
+    },
+    {
+      "name": "James Wu",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80",
+      "rating": 5,
+      "treatment": "Teeth Whitening",
+      "review": "Quick, painless, and the results were dramatic. Highly recommend Radiance Dental to anyone looking for quality care."
+    },
+    {
+      "name": "Priya Santos",
+      "photo": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=100&q=80",
+      "rating": 5,
+      "treatment": "Kids' Dentistry",
+      "review": "My daughter used to be terrified of dentists — Dr. Lin changed that completely. So patient and kind with children."
+    }
+  ],
+  "promotions": [
+    {
+      "badge": "Limited Time",
+      "title": "20% Off Teeth Whitening",
+      "desc": "Brighten your smile this month with our professional whitening treatment.",
+      "color": "sky"
+    },
+    {
+      "badge": "New Patients",
+      "title": "Free Dental Consultation",
+      "desc": "Book your first visit and receive a complimentary consultation and X-ray.",
+      "color": "mint"
+    },
+    {
+      "badge": "Family Package",
+      "title": "Family Dental Packages",
+      "desc": "Bundle checkups and cleanings for the whole family at a special rate.",
+      "color": "amber"
+    },
+    {
+      "badge": "Students",
+      "title": "Student Discount — 15% Off",
+      "desc": "Show your student ID and save on general dentistry services.",
+      "color": "violet"
+    },
+    {
+      "badge": "Seniors",
+      "title": "Senior Citizen Discount",
+      "desc": "Special pricing and priority scheduling for our senior patients.",
+      "color": "rose"
+    },
+    {
+      "badge": "Ongoing",
+      "title": "Refer & Earn Rewards",
+      "desc": "Refer a friend and both of you receive a treatment credit.",
+      "color": "emerald"
+    }
+  ],
+  "insurance": [
+    {
+      "name": "Delta Dental"
+    },
+    {
+      "name": "MetLife"
+    },
+    {
+      "name": "Cigna"
+    },
+    {
+      "name": "Aetna"
+    },
+    {
+      "name": "Guardian"
+    },
+    {
+      "name": "United Healthcare"
+    }
+  ],
+  "facilities": [
+    {
+      "icon": "fa-x-ray",
+      "title": "Digital X-Ray"
+    },
+    {
+      "icon": "fa-cube",
+      "title": "3D Scanner"
+    },
+    {
+      "icon": "fa-couch",
+      "title": "Comfortable Waiting Area"
+    },
+    {
+      "icon": "fa-wifi",
+      "title": "Free WiFi"
+    },
+    {
+      "icon": "fa-square-parking",
+      "title": "Parking"
+    },
+    {
+      "icon": "fa-wheelchair",
+      "title": "Wheelchair Accessible"
+    },
+    {
+      "icon": "fa-door-closed",
+      "title": "Private Consultation Rooms"
+    },
+    {
+      "icon": "fa-child-reaching",
+      "title": "Kids' Play Area"
+    },
+    {
+      "icon": "fa-mug-hot",
+      "title": "Coffee Corner"
+    },
+    {
+      "icon": "fa-snowflake",
+      "title": "Air-Conditioned Clinic"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you accept walk-ins?",
+      "answer": "Yes, we welcome walk-ins whenever possible, though we recommend booking an appointment to guarantee your preferred time slot."
+    },
+    {
+      "question": "How often should I visit the dentist?",
+      "answer": "We recommend a checkup and cleaning every six months to maintain optimal oral health, though your dentist may suggest a different schedule based on your needs."
+    },
+    {
+      "question": "Do you offer payment plans?",
+      "answer": "Yes, we offer flexible 0% interest installment plans for most major treatments. Speak with our front desk team for details."
+    },
+    {
+      "question": "What insurance do you accept?",
+      "answer": "We accept most major insurance providers including Delta Dental, MetLife, Cigna, Aetna, Guardian, and United Healthcare."
+    },
+    {
+      "question": "How long does teeth whitening take?",
+      "answer": "In-office professional whitening typically takes about 60–90 minutes and delivers immediate, visible results."
+    },
+    {
+      "question": "What should I do in a dental emergency?",
+      "answer": "Call our 24/7 emergency line immediately at +1 (555) 111-9999. For knocked-out teeth, keep the tooth moist and come in as soon as possible."
+    }
+  ],
+  "blog": [
+    {
+      "tag": "Oral Health",
+      "title": "How to Maintain Healthy Teeth",
+      "excerpt": "Simple daily habits that make a lasting difference in your oral health and confidence.",
+      "image": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80",
+      "date": "2026-06-12",
+      "readTime": "4 min read"
+    },
+    {
+      "tag": "Treatments",
+      "title": "Signs You Need a Root Canal",
+      "excerpt": "Learn the warning signs and how modern root canal therapy is virtually pain-free.",
+      "image": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80",
+      "date": "2026-06-03",
+      "readTime": "5 min read"
+    },
+    {
+      "tag": "Nutrition",
+      "title": "Foods That Damage Teeth",
+      "excerpt": "Discover which everyday foods and drinks may be silently harming your enamel.",
+      "image": "https://images.unsplash.com/photo-1517840901100-8179e982acb7?auto=format&fit=crop&w=600&q=80",
+      "date": "2026-05-22",
+      "readTime": "3 min read"
+    },
+    {
+      "tag": "Prevention",
+      "title": "Benefits of Regular Dental Cleaning",
+      "excerpt": "Why professional cleanings matter more than brushing alone for long-term health.",
+      "image": "https://images.unsplash.com/photo-1609840114035-3c981b782dcf?auto=format&fit=crop&w=600&q=80",
+      "date": "2026-05-10",
+      "readTime": "4 min read"
+    },
+    {
+      "tag": "Orthodontics",
+      "title": "How Invisalign Works",
+      "excerpt": "A step-by-step look at the clear aligner journey, from consultation to your new smile.",
+      "image": "https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&w=600&q=80",
+      "date": "2026-04-28",
+      "readTime": "6 min read"
+    },
+    {
+      "tag": "Cosmetic",
+      "title": "Is a Smile Makeover Right for You?",
+      "excerpt": "Explore the treatments that combine into a fully personalized smile transformation.",
+      "image": "https://images.unsplash.com/photo-1580281657702-257584239a55?auto=format&fit=crop&w=600&q=80",
+      "date": "2026-04-15",
+      "readTime": "5 min read"
+    }
+  ]
 }
