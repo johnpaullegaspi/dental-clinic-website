@@ -8,26 +8,30 @@
   <link rel="icon" href="data:," />
 </head>
 <body>
-  <!-- Decap CMS (formerly Netlify CMS). Auth is handled by DecapBridge via the
-       git-gateway backend's identity_url/gateway_url in config.yml — no Netlify
-       Identity widget needed.
+  <!-- Sveltia CMS — replaces Decap CMS as of 2026-07-29. This site now
+       authenticates directly against GitHub (see admin/config.yml's
+       `backend:` block) instead of through DecapBridge/git-gateway, because
+       Sveltia CMS does not support the git-gateway backend at all (confirmed
+       against Sveltia's own docs) and this also drops DecapBridge's
+       pay-per-publish billing entirely.
 
-       Pinned to an EXACT version (no caret) — a range like "^3.0.0" resolves
-       to whatever unpkg's newest matching release is at load time, with no
+       Pinned to an EXACT version (no caret/latest) — same lesson learned the
+       hard way on the sibling Aurelia project: an unpinned/range CDN URL
+       resolves to whatever unpkg's newest release is AT LOAD TIME, with no
        build step to catch a breaking update before it ships to visitors.
-       3.9.0 is confirmed working against DecapBridge's classic-auth login
-       screen (verified on the sibling Aurelia project's identical setup) and
-       satisfies DecapBridge's own "higher than v3.8.3" requirement.
+       0.175.1 was confirmed to load cleanly from unpkg, and confirmed
+       end-to-end against this exact config.yml (github backend + the
+       consolidated single-file collection), as of 2026-07-29.
 
-       IMPORTANT: this script tag must stay here, at the end of <body>, not
-       in <head>. Decap CMS builds its UI container via
-       document.body.appendChild(...) as soon as the script runs, with no
-       "wait for DOM ready" guard — if it ran before <body> existed (e.g. if
-       moved into <head> with no defer/async), document.body would still be
-       null and it would throw "Cannot read properties of null (reading
-       'appendChild')" before anything renders. (This exact mistake happened
-       on the sibling Aurelia project and took a while to track down — don't
-       reintroduce it here.) -->
-  <script src="https://unpkg.com/decap-cms@3.9.0/dist/decap-cms.js"></script>
+       IMPORTANT — do NOT add type="module" to this tag. Sveltia CMS is not
+       currently distributed as an ES module; adding type="module" will
+       silently fail to execute it.
+
+       This script tag lives at the end of <body> (same placement Decap CMS
+       needed there due to a document.body.appendChild-before-DOM-ready bug).
+       Sveltia hasn't shown that same issue in testing, but there's no reason
+       to risk it by moving this into <head>, so it stays here out of
+       caution. -->
+  <script src="https://unpkg.com/@sveltia/cms@0.175.1/dist/sveltia-cms.js"></script>
 </body>
 </html>
