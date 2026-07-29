@@ -1,14 +1,18 @@
 /* ==========================================================================
    Radiance Dental Studio — Site Interactions
-   Content for repeating sections (services, dentists, testimonials, blog,
-   promotions, facilities, faqs, before/after, gallery, insurance) and site
-   text (hero/about/contact/footer) is fetched from /content/*.json so the
-   site stays editable from the Decap CMS admin panel without a rebuild.
-   If a fetch fails (e.g. opened directly via file:// instead of a server),
-   each section falls back to the defaults baked in below.
+   All editable content (hero/about/contact/footer plus every repeating
+   section — services, dentists, testimonials, blog, promotions, facilities,
+   faqs, before/after, gallery, insurance) lives in ONE file,
+   content/site.json, fetched below and rendered into each section. This
+   used to be 12 separate content/*.json files (one per CMS collection) —
+   merged into one so that editing multiple sections in the CMS is one
+   "Save" (one commit) instead of one commit per section. See the comment
+   above the `collections:` key in admin/config.yml for the full reasoning.
+   If the fetch fails (e.g. opened directly via file:// instead of a
+   server), everything falls back to the defaults baked in below.
    ========================================================================== */
 
-/* ---------------- Fallback content (used only if /content/*.json can't be fetched) ---------------- */
+/* ---------------- Fallback content (used only if content/site.json can't be fetched) ---------------- */
 const FALLBACK = {
   site: {
     hero: {
@@ -153,6 +157,24 @@ const PROMO_GRADIENTS = {
   emerald: 'linear-gradient(135deg,#34d399,#059669)',
 };
 
+/* The single merged fallback object, matching the shape of content/site.json
+   exactly (hero/about/contact/social/footer plus every list section as a
+   top-level key) — used whole if content/site.json can't be fetched at all. */
+const FALLBACK_MERGED = {
+  ...FALLBACK.site,
+  services: FALLBACK.services,
+  dentists: FALLBACK.dentists,
+  whyUs: FALLBACK.whyUs,
+  beforeAfter: FALLBACK.beforeAfter,
+  gallery: FALLBACK.gallery,
+  testimonials: FALLBACK.testimonials,
+  promotions: FALLBACK.promotions,
+  insurance: FALLBACK.insurance,
+  facilities: FALLBACK.facilities,
+  faqs: FALLBACK.faqs,
+  blog: FALLBACK.blog,
+};
+
 /* Fetch JSON with graceful fallback (works over http/https; falls back silently over file://) */
 async function loadJSON(path, fallback) {
   try {
@@ -165,18 +187,15 @@ async function loadJSON(path, fallback) {
   }
 }
 
-/* Content collections edited via Decap CMS's "list" widget are stored on disk
-   as { "items": [...] } (Decap's file-collection format), while the bundled
-   fallback constants above are plain arrays. Normalize either shape to an array. */
+/* Each list-type section (services, dentists, etc.) is a plain array as a
+   field on the merged content object. This just guards against a field
+   coming back missing/malformed (e.g. a manual edit gone wrong in the CMS)
+   by falling back to the bundled default for that one section only, rather
+   than failing the whole page. */
 function asList(raw, fallback) {
   if (Array.isArray(raw)) return raw;
-  if (raw && Array.isArray(raw.items)) return raw.items;
+  if (raw && Array.isArray(raw.items)) return raw.items; // tolerate the old { items: [...] } shape too, just in case
   return fallback;
-}
-
-/* Fetch a list-type content file and always resolve to a plain array. */
-async function loadList(path, fallback) {
-  return asList(await loadJSON(path, fallback), fallback);
 }
 
 /* Resolve a dot-notation path like "about.mission.title" against an object */
@@ -301,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ---------------- Cookie Consent ----------------
-     Two bugs fixed here:
+     Three bugs fixed here:
      1. There was no persistence at all — every single page load (refresh,
         revisit, new tab) showed the banner again from scratch even after a
         visitor had already clicked Accept/Decline, which reads as "the
@@ -315,20 +334,38 @@ document.addEventListener('DOMContentLoaded', () => {
         though the class did change. Dismiss now also flips `pointer-events`
         immediately (so it can never block taps underneath, regardless of
         how it's rendering) and fully removes the banner from layout after
-        the transition finishes, instead of relying on the transform alone. */
+        the transition finishes, instead of relying on the transform alone.
+     3. 2026-07-30: at roughly 640–1024px wide (tablet-ish), the cookie
+        banner is nearly full-width and its Accept/Decline buttons land in
+        the bottom-right corner — exactly where the floating action button
+        (FAB) stack and back-to-top button also sit. The FAB stack IS on a
+        lower z-index than the banner (so a click always still reaches the
+        right button), but visually the two crowd/overlap each other,
+        making it easy to tap the FAB's own toggle/close button by mistake
+        and come away thinking "Accept did nothing." Now the FAB stack and
+        back-to-top button are hidden for as long as the cookie banner is
+        showing, and restored right after it's dismissed — so there's never
+        anything else to tap in that corner while the banner is up. */
   const cookieBanner = document.getElementById('cookie-banner');
   const COOKIE_CONSENT_KEY = 'radiance-cookie-consent';
+  const floatingActions = document.getElementById('floating-actions');
   let savedConsent = null;
   try { savedConsent = localStorage.getItem(COOKIE_CONSENT_KEY); } catch (e) { /* localStorage may be blocked (private mode, etc.) — fall back to always showing */ }
 
   if (!savedConsent) {
-    setTimeout(() => cookieBanner.classList.remove('translate-y-full'), 1200);
+    setTimeout(() => {
+      cookieBanner.classList.remove('translate-y-full');
+      if (floatingActions) floatingActions.classList.add('fab-hidden-for-cookie');
+      if (backToTop) backToTop.classList.add('fab-hidden-for-cookie');
+    }, 1200);
   }
 
   function dismissCookie(choice) {
     try { localStorage.setItem(COOKIE_CONSENT_KEY, choice); } catch (e) { /* ignore — worst case it re-prompts next visit */ }
     cookieBanner.classList.add('translate-y-full');
     cookieBanner.style.pointerEvents = 'none';
+    if (floatingActions) floatingActions.classList.remove('fab-hidden-for-cookie');
+    if (backToTop) backToTop.classList.remove('fab-hidden-for-cookie');
     setTimeout(() => { cookieBanner.style.display = 'none'; }, 600); // matches duration-500 + buffer
   }
   document.getElementById('cookie-accept').addEventListener('click', () => dismissCookie('accepted'));
@@ -504,25 +541,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* =====================================================================
-     LOAD CONTENT (from /content/*.json, Decap-CMS-editable) AND RENDER
+     LOAD CONTENT (from content/site.json, Decap-CMS-editable) AND RENDER
+     Everything lives in this one file now — one fetch instead of 12. See
+     the comment at the top of this file for why.
      ===================================================================== */
   loadAllContent();
 
   async function loadAllContent() {
-    const [site, services, dentists, whyUs, beforeAfter, gallery, testimonials, promotions, insurance, facilities, faqs, blog] = await Promise.all([
-      loadJSON('content/site.json', FALLBACK.site),
-      loadList('content/services.json', FALLBACK.services),
-      loadList('content/dentists.json', FALLBACK.dentists),
-      loadList('content/why-us.json', FALLBACK.whyUs),
-      loadList('content/before-after.json', FALLBACK.beforeAfter),
-      loadList('content/gallery.json', FALLBACK.gallery),
-      loadList('content/testimonials.json', FALLBACK.testimonials),
-      loadList('content/promotions.json', FALLBACK.promotions),
-      loadList('content/insurance.json', FALLBACK.insurance),
-      loadList('content/facilities.json', FALLBACK.facilities),
-      loadList('content/faqs.json', FALLBACK.faqs),
-      loadList('content/blog.json', FALLBACK.blog),
-    ]);
+    const data = await loadJSON('content/site.json', FALLBACK_MERGED);
+
+    const site = { hero: data.hero, about: data.about, contact: data.contact, social: data.social, footer: data.footer };
+    const services = asList(data.services, FALLBACK.services);
+    const dentists = asList(data.dentists, FALLBACK.dentists);
+    const whyUs = asList(data.whyUs, FALLBACK.whyUs);
+    const beforeAfter = asList(data.beforeAfter, FALLBACK.beforeAfter);
+    const gallery = asList(data.gallery, FALLBACK.gallery);
+    const testimonials = asList(data.testimonials, FALLBACK.testimonials);
+    const promotions = asList(data.promotions, FALLBACK.promotions);
+    const insurance = asList(data.insurance, FALLBACK.insurance);
+    const facilities = asList(data.facilities, FALLBACK.facilities);
+    const faqs = asList(data.faqs, FALLBACK.faqs);
+    const blog = asList(data.blog, FALLBACK.blog);
 
     hydrateSiteContent(site);
     renderDentists(dentists);
